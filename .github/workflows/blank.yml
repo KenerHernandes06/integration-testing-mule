@@ -30,10 +30,14 @@ jobs:
       - name: Running Integration Tests (defaults to bat.yaml file)
         run: bat
 
+        # example of bat command bat ./src/test/resources/integration/bat.dwl
+      - name: Print Report
+        run: cat /home/runner/work/integration-testing-mule/integration-testing-mule/report.json
+
 # tool for performance testing
-# this step is desactivates, is false
+# this step is deactivated, if false.
       - name: Performance Testing
         if: ${{ false }}
         uses: grafana/k6-action@v0.2.0
         with:
-          filename: ./src/test/resources/performance/test.js  
+          filename: ./src/test/resources/performance/test.js 
