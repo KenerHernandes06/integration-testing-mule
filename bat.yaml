@@ -4,9 +4,9 @@ files:
   - file: checkin-test-suite.dwl
 reporters:
     - type: HTML
-      outFile: ./HTML.html
+      outFile: report.html
     - type: JSON
-      outFile: ./JSON.json
+      outFile: report.json
   # - type: SumoLogic
   #   options:
   #     SUMO_ENDPOINT: <sumo_source>
