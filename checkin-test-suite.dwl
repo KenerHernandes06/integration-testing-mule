@@ -15,7 +15,8 @@ describe `Happy Path CheckIn` in [
       }
     } assert [
       $.response.status mustEqual 200,
-      $.response.body.paymentID mustEqual "PAY-1AKD7482FAB9STATKO"
+      $.response.body.paymentID mustEqual "PAY-1AKD7482FAB9STATKO",
+      typeOf($.response.body.paymentID) as String mustEqual "String"
     ] execute [
       log($.response) // <--- Then we’ll log the response
     ]
